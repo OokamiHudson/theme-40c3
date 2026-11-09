@@ -1,0 +1,55 @@
+name: Commit workflow
+
+on:
+  - push
+
+permissions:
+  id-token: write
+  pages: write
+
+jobs:
+  build:
+    name: Build examples
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: $/.github/actions/install-typst
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install Fonts ...
+        run: |
+          mkdir fonts
+          cd fonts
+
+          wget -q https://github.com/scfried/soft-type-jersey/raw/c0c25952e139d2c18416685e653bcf87d7b78482/fonts/ttf/Jersey10-Regular.ttf
+
+          wget -q https://github.com/source-foundry/Hack/raw/refs/tags/v3.003/build/ttf/Hack-Bold.ttf
+          wget -q https://github.com/source-foundry/Hack/raw/refs/tags/v3.003/build/ttf/Hack-BoldItalic.ttf
+          wget -q https://github.com/source-foundry/Hack/raw/refs/tags/v3.003/build/ttf/Hack-Italic.ttf
+          wget -q https://github.com/source-foundry/Hack/raw/refs/tags/v3.003/build/ttf/Hack-Regular.ttf
+
+      - name: Build examples
+        env:
+          TYPST_FONT_PATHS: fonts
+        run: |
+          mkdir build/
+          typst compile example.typ build/example.pdf
+          typst compile example-presentation.typ build/example-presentation.pdf
+
+      - name: Upload static files as artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: build/
+
+  deploy:
+    name: Deploy to GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-26.04
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

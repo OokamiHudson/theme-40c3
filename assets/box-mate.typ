@@ -1,0 +1,111 @@
+// Converted from SVG
+
+#let box-mate(fill: black, background: none, stroke: none, width: none, height: none) = {
+  let _nw = 59.41pt
+  let _nh = 163.24pt
+  let (m, l, c, q, z) = (curve.move, curve.line, curve.cubic, curve.quad, curve.close)
+  let _draw() = {
+    box(width: _nw, height: _nh, fill: background,
+      curve(
+        fill: fill,
+        fill-rule: "non-zero",
+        stroke: stroke,
+        m((46.51pt, 88.7pt)),
+        l((12.9pt, 88.7pt)),
+        c((12.9pt, 88.7pt), (12.9pt, 132.18pt), (12.9pt, 132.18pt)),
+        c((12.9pt, 136.53pt), (12.9pt, 140.88pt), (12.9pt, 145.23pt)),
+        c((13.59pt, 146.25pt), (14.66pt, 147.5pt), (15.54pt, 148.09pt)),
+        c((25.13pt, 148.09pt), (34.72pt, 148.09pt), (44.31pt, 148.09pt)),
+        c((45.04pt, 147.5pt), (46.01pt, 146.23pt), (46.51pt, 145.23pt)),
+        c((46.51pt, 140.88pt), (46.51pt, 136.53pt), (46.51pt, 132.18pt)),
+        l((46.51pt, 132.18pt)),
+        c((46.51pt, 132.18pt), (46.51pt, 88.7pt), (46.51pt, 88.7pt)),
+        z(),
+        m((44.68pt, 130.35pt)),
+        l((14.73pt, 130.35pt)),
+        c((14.73pt, 130.35pt), (14.73pt, 90.53pt), (14.73pt, 90.53pt)),
+        l((44.68pt, 90.53pt)),
+        z(),
+        m((46.51pt, 78.28pt)),
+        c((45.41pt, 72.92pt), (44.31pt, 67.56pt), (43.22pt, 62.2pt)),
+        c((40.66pt, 50.22pt), (38.09pt, 38.23pt), (35.53pt, 26.25pt)),
+        l((37.96pt, 26.25pt)),
+        c((37.96pt, 26.25pt), (37.96pt, 26.25pt), (37.96pt, 26.25pt)),
+        c((37.96pt, 22.96pt), (37.96pt, 19.68pt), (37.96pt, 16.39pt)),
+        c((35.99pt, 15.8pt), (33.15pt, 15.17pt), (29.69pt, 15.17pt)),
+        c((28.39pt, 15.17pt), (27.18pt, 15.26pt), (26.07pt, 15.4pt)),
+        c((24.59pt, 15.59pt), (23.29pt, 15.87pt), (22.2pt, 16.17pt)),
+        c((21.93pt, 16.24pt), (21.67pt, 16.32pt), (21.42pt, 16.39pt)),
+        l((21.42pt, 26.25pt)),
+        c((21.42pt, 26.25pt), (21.42pt, 26.25pt), (21.42pt, 26.25pt)),
+        l((23.01pt, 26.25pt)),
+        c((21.16pt, 35.94pt), (19.32pt, 45.63pt), (17.47pt, 55.32pt)),
+        c((17.47pt, 55.35pt), (17.46pt, 55.39pt), (17.45pt, 55.42pt)),
+        c((17.45pt, 55.42pt), (17.45pt, 55.42pt), (17.45pt, 55.42pt)),
+        c((16.96pt, 58pt), (16.47pt, 60.57pt), (15.98pt, 63.15pt)),
+        c((14.95pt, 68.43pt), (13.93pt, 73.71pt), (12.9pt, 79pt)),
+        c((12.9pt, 82.31pt), (12.9pt, 85.61pt), (12.9pt, 88.92pt)),
+        l((46.51pt, 88.92pt)),
+        c((46.51pt, 85.38pt), (46.51pt, 81.83pt), (46.51pt, 78.29pt)),
+        z(),
+        m((23.24pt, 17.78pt)),
+        c((25.35pt, 17.26pt), (27.51pt, 16.99pt), (29.68pt, 16.99pt)),
+        c((31.86pt, 16.99pt), (34.02pt, 17.25pt), (36.12pt, 17.78pt)),
+        l((36.12pt, 24.42pt)),
+        l((23.23pt, 24.42pt)),
+        l((23.23pt, 17.78pt)),
+        z(),
+        m((19.91pt, 42.63pt)),
+        l((19.91pt, 42.63pt)),
+        c((19.42pt, 45.17pt), (18.93pt, 47.71pt), (18.44pt, 50.26pt)),
+        c((18.93pt, 47.72pt), (19.42pt, 45.18pt), (19.91pt, 42.63pt)),
+        z(),
+        m((18.34pt, 77.74pt)),
+        l((16.55pt, 77.4pt)),
+        l((18.99pt, 64.6pt)),
+        l((20.78pt, 64.94pt)),
+        z(),
+        m((30.2pt, 50.48pt)),
+        l((29.74pt, 50.36pt)),
+        l((29.28pt, 50.48pt)),
+        l((20.91pt, 52.64pt)),
+        l((19.79pt, 52.93pt)),
+        l((20.93pt, 47.02pt)),
+        l((21.42pt, 44.46pt)),
+        l((37.53pt, 44.46pt)),
+        c((37.53pt, 44.46pt), (38.03pt, 46.83pt), (38.03pt, 46.83pt)),
+        l((39.32pt, 52.9pt)),
+        l((30.2pt, 50.49pt)),
+        z(),
+        m((41.72pt, 55.42pt)),
+        c((40.81pt, 51.16pt), (39.91pt, 46.89pt), (39pt, 42.63pt)),
+        l((39pt, 42.63pt)),
+        c((39.91pt, 46.89pt), (40.81pt, 51.16pt), (41.72pt, 55.42pt)),
+        z(),
+        m((0pt, 163.24pt)),
+        l((59.41pt, 163.24pt)),
+        c((59.41pt, 163.24pt), (59.41pt, 0pt), (59.41pt, 0pt)),
+        l((0pt, 0pt)),
+        z(),
+        m((2.92pt, 2.92pt)),
+        l((56.48pt, 2.92pt)),
+        c((56.48pt, 2.92pt), (56.48pt, 160.32pt), (56.48pt, 160.32pt)),
+        l((2.92pt, 160.32pt)),
+        c((2.92pt, 160.32pt), (2.92pt, 2.92pt), (2.92pt, 2.92pt)),
+        z(),
+      )
+    )
+  }
+  if width != none or height != none {
+    let _s = if width != none { width / _nw } else { height / _nh }
+    box(
+      width: if width != none { width } else { _nw * _s },
+      height: if height != none { height } else { _nh * _s },
+      scale(x: _s * 100%, y: _s * 100%, origin: top + left, reflow: true,
+        _draw()
+      )
+    )
+  } else {
+    _draw()
+  }
+}

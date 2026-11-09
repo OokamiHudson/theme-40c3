@@ -1,0 +1,112 @@
+// Converted from SVG
+
+#let box-blinken(fill: black, background: none, stroke: none, width: none, height: none) = {
+  let _nw = 91.58pt
+  let _nh = 115.51pt
+  let (m, l, c, q, z) = (curve.move, curve.line, curve.cubic, curve.quad, curve.close)
+  let _draw() = {
+    box(width: _nw, height: _nh, fill: background,
+      curve(
+        fill: fill,
+        fill-rule: "non-zero",
+        stroke: stroke,
+        m((0pt, 0pt)),
+        l((0pt, 115.5098pt)),
+        l((91.5801pt, 115.5098pt)),
+        l((91.5801pt, 0pt)),
+        l((0pt, 0pt)),
+        z(),
+        m((41.2109pt, 5.8496pt)),
+        l((50.3809pt, 5.8496pt)),
+        l((50.3809pt, 17.0098pt)),
+        l((41.2109pt, 17.0098pt)),
+        l((41.2109pt, 5.8496pt)),
+        z(),
+        m((41.2109pt, 21.2891pt)),
+        l((50.3809pt, 21.2891pt)),
+        l((50.3809pt, 32.4492pt)),
+        l((41.2109pt, 32.4492pt)),
+        l((41.2109pt, 21.2891pt)),
+        z(),
+        m((28.8594pt, 36.7305pt)),
+        l((38.0293pt, 36.7305pt)),
+        l((38.0293pt, 47.8906pt)),
+        l((28.8594pt, 47.8906pt)),
+        l((28.8594pt, 36.7305pt)),
+        z(),
+        m((41.2109pt, 36.7305pt)),
+        l((50.3809pt, 36.7305pt)),
+        l((50.3809pt, 47.8906pt)),
+        l((41.2109pt, 47.8906pt)),
+        l((41.2109pt, 36.7305pt)),
+        z(),
+        m((53.5508pt, 36.7305pt)),
+        l((62.7207pt, 36.7305pt)),
+        l((62.7207pt, 47.8906pt)),
+        l((53.5508pt, 47.8906pt)),
+        l((53.5508pt, 36.7305pt)),
+        z(),
+        m((16.5195pt, 52.1699pt)),
+        l((25.6895pt, 52.1699pt)),
+        l((25.6895pt, 63.3301pt)),
+        l((16.5195pt, 63.3301pt)),
+        l((16.5195pt, 52.1699pt)),
+        z(),
+        m((41.2109pt, 52.1699pt)),
+        l((50.3809pt, 52.1699pt)),
+        l((50.3809pt, 63.3301pt)),
+        l((41.2109pt, 63.3301pt)),
+        l((41.2109pt, 52.1699pt)),
+        z(),
+        m((65.8906pt, 52.1699pt)),
+        l((75.0605pt, 52.1699pt)),
+        l((75.0605pt, 63.3301pt)),
+        l((65.8906pt, 63.3301pt)),
+        l((65.8906pt, 52.1699pt)),
+        z(),
+        m((41.2109pt, 67.6094pt)),
+        l((50.3809pt, 67.6094pt)),
+        l((50.3809pt, 78.7695pt)),
+        l((41.2109pt, 78.7695pt)),
+        l((41.2109pt, 67.6094pt)),
+        z(),
+        m((28.8594pt, 82.3398pt)),
+        l((38.0293pt, 82.3398pt)),
+        l((38.0293pt, 93.5pt)),
+        l((28.8594pt, 93.5pt)),
+        l((28.8594pt, 82.3398pt)),
+        z(),
+        m((53.5508pt, 82.3398pt)),
+        l((62.7207pt, 82.3398pt)),
+        l((62.7207pt, 93.5pt)),
+        l((53.5508pt, 93.5pt)),
+        l((53.5508pt, 82.3398pt)),
+        z(),
+        m((16.5195pt, 98.4902pt)),
+        l((25.6895pt, 98.4902pt)),
+        l((25.6895pt, 109.6504pt)),
+        l((16.5195pt, 109.6504pt)),
+        l((16.5195pt, 98.4902pt)),
+        z(),
+        m((65.8906pt, 98.4902pt)),
+        l((75.0605pt, 98.4902pt)),
+        l((75.0605pt, 109.6504pt)),
+        l((65.8906pt, 109.6504pt)),
+        l((65.8906pt, 98.4902pt)),
+        z(),
+      )
+    )
+  }
+  if width != none or height != none {
+    let _s = if width != none { width / _nw } else { height / _nh }
+    box(
+      width: if width != none { width } else { _nw * _s },
+      height: if height != none { height } else { _nh * _s },
+      scale(x: _s * 100%, y: _s * 100%, origin: top + left, reflow: true,
+        _draw()
+      )
+    )
+  } else {
+    _draw()
+  }
+}

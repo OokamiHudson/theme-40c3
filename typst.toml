@@ -1,0 +1,7 @@
+[package]
+name = "theme-40c3"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["OokamiHudson"]
+license = "CC0"
+description = "40c3 design building blocks in Typst. Assets copyright their respective owners!"

@@ -1,0 +1,33 @@
+name: Install Typst
+description: Install Typst
+inputs:
+  version:
+    description: Typst version
+    required: false
+    default: v0.15.1
+outputs:
+  binary:
+    description: Path to installed Typst
+    value: ${{ steps.installation.outputs.binary }}
+  version:
+    description: Installed version
+    value: ${{ steps.installation.outputs.version }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Installing Typst ...
+      shell: bash
+      id: installation
+      env:
+        TYPST_BASE_URL: https://github.com/typst/typst/releases/download/${{ inputs.version }}
+        TYPST_PACKAGE_IDENTIFER: typst-x86_64-unknown-linux-musl
+        TYPST_VERSION: ${{ inputs.version }}
+      run: |
+        TARGET=$HOME/tools/typst
+        mkdir -p $TARGET
+        wget "$TYPST_BASE_URL/$TYPST_PACKAGE_IDENTIFER.tar.xz"
+        wget -qO - "$TYPST_BASE_URL/$TYPST_PACKAGE_IDENTIFER.tar.xz" | tar xJ --strip-components=1 -C $TARGET "$TYPST_PACKAGE_IDENTIFER/typst"
+        echo "$TARGET" >> $GITHUB_PATH
+        echo "version=$TYPST_VERSION" >> $GITHUB_OUTPUT
+        echo "binary=$TARGET/typst" >> $GITHUB_OUTPUT
